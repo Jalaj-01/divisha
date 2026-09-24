@@ -1,0 +1,26 @@
+{
+  "name": "divisha-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Divisha Electronics - Production-Grade Scalable E-Commerce Platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "db:generate": "pnpm --filter @divisha/database db:generate",
+    "db:push": "pnpm --filter @divisha/database db:push",
+    "db:seed": "pnpm --filter @divisha/database db:seed"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@10.20.0"
+}
