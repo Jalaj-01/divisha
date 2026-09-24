@@ -52,7 +52,7 @@ async function bootstrap() {
     customSiteTitle: 'Divisha Electronics API Docs'
   });
 
-  const port = process.env.API_PORT || 4000;
+  const port = process.env.PORT || process.env.API_PORT || 4000;
   await app.listen(port, '0.0.0.0');
 
   console.log(`=======================================================`);
